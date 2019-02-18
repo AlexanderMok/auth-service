@@ -1,19 +1,19 @@
 # auth-service
-Java authentication and authorization service using Spring Security Jwt.
+Java authentication and authorization service using Spring Security Jwt Oauth2.
 
-This implementation supports password and refresh token ***Grant types***
+This implementation supports password and refresh token ***Grant types*** according to Oauth2.
 
 ### Version
-Spring boot 2.1.3.RELEASE
+- Spring boot 2.1.3.RELEASE
 
-Java 1.8
+- Java 1.8
 
-MySQL to store user info
+- MySQL to store user info
 
 ### Configuration
 
-Related configurations are in application.yml
-Tables used are in db_dev.sql
+- Related configurations are in application.yml
+- Tables used are in db_dev.sql
 
 ### User
 ```
@@ -44,7 +44,7 @@ encode 'trusted:client-secret' by Base64
 get 'dHJ1c3RlZDpjbGllbnQtc2VjcmV0'
 ```
 
-- request auth server
+##### request auth server
 
 Use rest client or curl.
 
@@ -77,7 +77,7 @@ And you will get the following json if it successes.
 }
 ```
 
-- Refresh token
+##### Refresh token
 
 Set up http headers Content-type and Authorization like previous step.
 
@@ -93,7 +93,7 @@ curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' -H 'Authorizat
 
 And you will get a new access_token and refresh_token.
 
-- check token
+##### check token
 
 Check token is to decode access_token.
 
