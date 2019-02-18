@@ -44,7 +44,7 @@ encode 'trusted:client-secret' by Base64
 get 'dHJ1c3RlZDpjbGllbnQtc2VjcmV0'
 ```
 
-##### request auth server
+#### request auth server
 
 Use rest client or curl.
 
@@ -77,7 +77,7 @@ And you will get the following json if it successes.
 }
 ```
 
-##### Refresh token
+#### Refresh token
 
 Set up http headers Content-type and Authorization like previous step.
 
@@ -93,7 +93,7 @@ curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' -H 'Authorizat
 
 And you will get a new access_token and refresh_token.
 
-##### check token
+#### check token
 
 Check token is to decode access_token.
 
